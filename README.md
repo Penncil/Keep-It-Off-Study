@@ -14,4 +14,8 @@ To overcome the challenges due to the informative reporting process in the real-
 ![image](https://user-images.githubusercontent.com/38872447/161109563-61652411-37f6-4bb6-b73c-b4d1abaa21fd.png)
 
 
+In Stage II, the pairwise construction of likelihood comes with the price of higher computational cost, as the algorithm involves computation of likelihood constructed by all pairs of patients within a site. To alleviate this limitation, we implemented an algorithm with R calling C, which is about 50 times faster than using the R programming language alone. The R code and C code to implement the method can be found in this repo. 
+
+
+
 
