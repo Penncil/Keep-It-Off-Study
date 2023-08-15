@@ -199,7 +199,12 @@ res1<- optim(ini.val, mylik, method = "BFGS",control = list(trace=TRUE,REPORT=1)
 par.est <- res1$par
 print(par.est)
 
-
+# se
+n.t=length(unique(mydata_wo_NA$id))
+mydat=list(p=p, n.t=n.t, yvec=yvec, index=index, count=count, 
+           xall=xall, neach=neach, sigma2=totalsigma2, beta.t=res1$par)		
+res2 <- covcal(mydat)/n.t
+par.ase <- sqrt(res2[col(res2)==row(res2)]) 
 
 
 
